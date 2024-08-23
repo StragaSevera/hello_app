@@ -55,7 +55,7 @@ if config_env() == :prod do
 
   config :hello_app, HelloAppWeb.Endpoint,
     server: true,
-    http: [port: {:system, "PORT"}],
+    http: [port: port],
     url: [host: System.get_env("APP_NAME") <> ".gigalixirapp.com", port: 443],
     secret_key_base: secret_key_base
 
